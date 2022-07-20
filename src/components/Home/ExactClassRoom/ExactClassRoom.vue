@@ -66,6 +66,7 @@ const getExactClassRoomDataAction = async (id) => {
 setInterval(() => {
   async function fn() {
     const result = await getExactClassRoomStateData(id);
+    deviceStatus.value = await getExactClassDeviceStateData(id);
     console.log(result);
     roomState.value = result;
   }
